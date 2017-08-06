@@ -1,0 +1,19 @@
+<a href='/auth/twitter'>Sign in with Twitter</a>
+<br/>
+<br/>
+<br/>
+Accounts: <%=@accounts.count%>
+<br/>
+<br/>
+<table>
+  <% @accounts.each do |acc| %>
+    <tr>
+      <td>
+        <%=link_to acc.name, "https://twitter.com/#{acc.name}" %>
+      </td>
+      <td><%=acc.followers_count %><td>
+      <td><%=acc.friends_count %><td>
+      <td><%=acc.followers_count / acc.friends_count %></td>
+    </tr>
+  <% end %>
+</table>

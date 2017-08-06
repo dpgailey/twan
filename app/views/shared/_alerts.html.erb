@@ -1,0 +1,25 @@
+<% if !notice.blank? || !alert.blank? %>
+
+  <% if !notice.blank? %>
+
+    <div id="notify" class="alert notifications alert-success text-center alert-dismissible alert-custom notify-navbar" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong><i class="fa fa-check-circle"></i></strong> <%= notice %>
+    </div>
+
+  <% end %>
+
+  <% if !alert.blank? %>
+
+    <div id="notify" class="alert notifications alert-danger text-center alert-dismissible alert-custom" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <strong><i class="fa fa-warning"></i></strong> <%= alert %>
+    </div>
+
+  <% end %>
+
+<% end %>
